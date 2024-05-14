@@ -7,17 +7,18 @@ import {
 } from 'react-native';
 
 const App = () => {
+
+  const handleNewAppointment = () => {
+    console.log('You pressed the button!');
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>
         Administrador de Citas {''}
         <Text style={styles.titleBold}>Veterinaria</Text>
       </Text>
-      <Pressable
-        onPress={() => {
-          console.log('You pressed the button!');
-        }}
-      >
+      <Pressable onPress={ handleNewAppointment }>
         <Text>Nueva Cita</Text>
       </Pressable>
     </SafeAreaView>
