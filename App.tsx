@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Modal,
   Pressable,
   SafeAreaView,
   StyleSheet,
@@ -7,7 +8,6 @@ import {
 } from 'react-native';
 
 const App = () => {
-
   const handleNewAppointment = () => {
     console.log('You pressed the button!');
   };
@@ -18,12 +18,16 @@ const App = () => {
         Administrador de Citas {''}
         <Text style={styles.titleBold}>Veterinaria</Text>
       </Text>
+
       <Pressable
         onPress={ handleNewAppointment }
-        style={styles.buttonNewAppointment}
-      >
+        style={styles.buttonNewAppointment}>
         <Text style={styles.buttonTextNewAppointment}>Nueva Cita</Text>
       </Pressable>
+
+      <Modal animationType="slide" visible={false}>
+        <Text>From Modal</Text>
+      </Modal>
     </SafeAreaView>
   );
 };
