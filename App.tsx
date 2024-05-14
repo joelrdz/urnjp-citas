@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Modal,
   Pressable,
@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 
 const App = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   const handleNewAppointment = () => {
     console.log('You pressed the button!');
   };
@@ -20,12 +22,12 @@ const App = () => {
       </Text>
 
       <Pressable
-        onPress={ handleNewAppointment }
+        onPress={() => setModalVisible(true)}
         style={styles.buttonNewAppointment}>
         <Text style={styles.buttonTextNewAppointment}>Nueva Cita</Text>
       </Pressable>
 
-      <Modal animationType="slide" visible={false}>
+      <Modal animationType="slide" visible={modalVisible}>
         <Text>From Modal</Text>
       </Modal>
     </SafeAreaView>
