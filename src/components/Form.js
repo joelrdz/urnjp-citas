@@ -60,17 +60,20 @@ const Form = ({ modalVisible }) => {
               keyboardType="phone-pad"
               value={phone}
               onChangeText={setPhone}
+              maxLength={10}
             />
           </View>
 
           <View style={styles.field}>
             <Text style={styles.label}>Síntomas</Text>
             <TextInput
-              style={styles.input}
+              style={[styles.input, styles.inputSymptoms]}
               placeholder="Síntomas"
               placeholderTextColor={'#666'}
               value={symptoms}
               onChangeText={setSymptoms}
+              multiline={true}
+              numberOfLines={4}
             />
           </View>
         </ScrollView>
@@ -109,6 +112,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     padding: 15,
     borderRadius: 10,
+  },
+  inputSymptoms: {
+    height: 100,
   },
 });
 
