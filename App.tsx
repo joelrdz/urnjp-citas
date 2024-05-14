@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Button,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -12,6 +13,12 @@ const App = () => {
         Administrador de Citas {''}
         <Text style={styles.titleBold}>Veterinaria</Text>
       </Text>
+      <Button
+        title="Nueva Cita"
+        onPress={() => {
+          console.log('You pressed the button!');
+        }}
+      />
     </SafeAreaView>
   );
 };
