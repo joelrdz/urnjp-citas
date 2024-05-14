@@ -7,7 +7,10 @@ import {
 const App = () => {
   return (
     <SafeAreaView>
-      <Text>Hello World</Text>
+      <Text>
+        Administrador de Citas {''}
+        <Text>Veterinaria</Text>
+      </Text>
     </SafeAreaView>
   );
 };
