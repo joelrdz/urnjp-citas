@@ -24,7 +24,7 @@ const App = () => {
         <Text style={styles.buttonTextNewAppointment}>Nueva Cita</Text>
       </Pressable>
 
-      <Form />
+      <Form modalVisible={modalVisible} />
     </SafeAreaView>
   );
 };
