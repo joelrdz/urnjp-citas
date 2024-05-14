@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Modal, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const Form = ({ modalVisible }) => {
+  const [patient, setPatient] = useState('');
+  const [owner, setOwner] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [symptoms, setSymptoms] = useState('');
+
   return (
     <Modal animationType="slide" visible={modalVisible}>
       <SafeAreaView style={styles.content}>
@@ -17,6 +23,8 @@ const Form = ({ modalVisible }) => {
               style={styles.input}
               placeholder="Nombre Paciente"
               placeholderTextColor={'#666'}
+              value={patient}
+              onChangeText={setPatient}
             />
           </View>
 
@@ -26,6 +34,8 @@ const Form = ({ modalVisible }) => {
               style={styles.input}
               placeholder="Nombre Propietario"
               placeholderTextColor={'#666'}
+              value={owner}
+              onChangeText={setOwner}
             />
           </View>
 
@@ -36,6 +46,8 @@ const Form = ({ modalVisible }) => {
               placeholder="Email Propietario"
               placeholderTextColor={'#666'}
               keyboardType="email-address"
+              value={email}
+              onChangeText={setEmail}
             />
           </View>
 
@@ -46,6 +58,8 @@ const Form = ({ modalVisible }) => {
               placeholder="Teléfono Propietario"
               placeholderTextColor={'#666'}
               keyboardType="phone-pad"
+              value={phone}
+              onChangeText={setPhone}
             />
           </View>
 
@@ -55,6 +69,8 @@ const Form = ({ modalVisible }) => {
               style={styles.input}
               placeholder="Síntomas"
               placeholderTextColor={'#666'}
+              value={symptoms}
+              onChangeText={setSymptoms}
             />
           </View>
         </ScrollView>
