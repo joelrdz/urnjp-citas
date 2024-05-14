@@ -1,61 +1,63 @@
 import React from 'react';
-import { Modal, SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Modal, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const Form = ({ modalVisible }) => {
   return (
     <Modal animationType="slide" visible={modalVisible}>
       <SafeAreaView style={styles.content}>
-        <Text style={styles.title}>
-          Nueva {''}
-          <Text style={styles.titleBold}>Cita</Text>
-        </Text>
+        <ScrollView>
+          <Text style={styles.title}>
+            Nueva {''}
+            <Text style={styles.titleBold}>Cita</Text>
+          </Text>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>Nombre Paciente</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Nombre Paciente"
-            placeholderTextColor={'#666'}
-          />
-        </View>
+          <View style={styles.field}>
+            <Text style={styles.label}>Nombre Paciente</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Nombre Paciente"
+              placeholderTextColor={'#666'}
+            />
+          </View>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>Nombre Propietario</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Nombre Propietario"
-            placeholderTextColor={'#666'}
-          />
-        </View>
+          <View style={styles.field}>
+            <Text style={styles.label}>Nombre Propietario</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Nombre Propietario"
+              placeholderTextColor={'#666'}
+            />
+          </View>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>Email Propietario</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Email Propietario"
-            placeholderTextColor={'#666'}
-            keyboardType="email-address"
-          />
-        </View>
+          <View style={styles.field}>
+            <Text style={styles.label}>Email Propietario</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Email Propietario"
+              placeholderTextColor={'#666'}
+              keyboardType="email-address"
+            />
+          </View>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>Teléfono Propietario</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Teléfono Propietario"
-            placeholderTextColor={'#666'}
-            keyboardType="phone-pad"
-          />
-        </View>
+          <View style={styles.field}>
+            <Text style={styles.label}>Teléfono Propietario</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Teléfono Propietario"
+              placeholderTextColor={'#666'}
+              keyboardType="phone-pad"
+            />
+          </View>
 
-        <View style={styles.field}>
-          <Text style={styles.label}>Síntomas</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Síntomas"
-            placeholderTextColor={'#666'}
-          />
-        </View>
+          <View style={styles.field}>
+            <Text style={styles.label}>Síntomas</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Síntomas"
+              placeholderTextColor={'#666'}
+            />
+          </View>
+        </ScrollView>
       </SafeAreaView>
     </Modal>
   );
