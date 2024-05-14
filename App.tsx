@@ -18,8 +18,11 @@ const App = () => {
         Administrador de Citas {''}
         <Text style={styles.titleBold}>Veterinaria</Text>
       </Text>
-      <Pressable onPress={ handleNewAppointment }>
-        <Text>Nueva Cita</Text>
+      <Pressable
+        onPress={ handleNewAppointment }
+        style={styles.buttonNewAppointment}
+      >
+        <Text style={styles.buttonTextNewAppointment}>Nueva Cita</Text>
       </Pressable>
     </SafeAreaView>
   );
@@ -38,6 +41,20 @@ const styles = StyleSheet.create({
   titleBold: {
     fontWeight: '900',
     color: '#6D28D9',
+  },
+  buttonNewAppointment: {
+    backgroundColor: '#6D28D9',
+    padding: 15,
+    marginTop: 30,
+    marginHorizontal: 20,
+    borderRadius: 10,
+  },
+  buttonTextNewAppointment: {
+    textAlign: 'center',
+    color: '#FFF',
+    fontSize: 18,
+    fontWeight: '900',
+    textTransform: 'uppercase',
   },
 });
 
