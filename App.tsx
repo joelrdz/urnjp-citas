@@ -6,13 +6,10 @@ import {
   StyleSheet,
   Text,
 } from 'react-native';
+import Form from './src/components/Form';
 
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
-
-  const handleNewAppointment = () => {
-    console.log('You pressed the button!');
-  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -27,9 +24,7 @@ const App = () => {
         <Text style={styles.buttonTextNewAppointment}>Nueva Cita</Text>
       </Pressable>
 
-      <Modal animationType="slide" visible={modalVisible}>
-        <Text>From Modal</Text>
-      </Modal>
+      <Form />
     </SafeAreaView>
   );
 };
