@@ -18,6 +18,44 @@ const Form = ({ modalVisible }) => {
             placeholderTextColor={'#666'}
           />
         </View>
+
+        <View style={styles.field}>
+          <Text style={styles.label}>Nombre Propietario</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Nombre Propietario"
+            placeholderTextColor={'#666'}
+          />
+        </View>
+
+        <View style={styles.field}>
+          <Text style={styles.label}>Email Propietario</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Email Propietario"
+            placeholderTextColor={'#666'}
+            keyboardType="email-address"
+          />
+        </View>
+
+        <View style={styles.field}>
+          <Text style={styles.label}>Teléfono Propietario</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Teléfono Propietario"
+            placeholderTextColor={'#666'}
+            keyboardType="phone-pad"
+          />
+        </View>
+
+        <View style={styles.field}>
+          <Text style={styles.label}>Síntomas</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Síntomas"
+            placeholderTextColor={'#666'}
+          />
+        </View>
       </SafeAreaView>
     </Modal>
   );
