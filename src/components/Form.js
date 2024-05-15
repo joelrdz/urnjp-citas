@@ -18,6 +18,7 @@ const Form = ({ modalVisible, setModalVisible, appointments, setAppointments }) 
     }
 
     const newAppointment = {
+      id: Date.now(),
       patient,
       owner,
       email,

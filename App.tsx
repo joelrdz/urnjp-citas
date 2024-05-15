@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  FlatList,
   Pressable,
   SafeAreaView,
   StyleSheet,
@@ -27,7 +28,15 @@ const App = () => {
       {appointments.length === 0 ? (
         <Text style={styles.noAppointments}>No hay citas aún</Text>
       ) : (
-        <Text>Si hay citas</Text>
+        <FlatList
+          data={appointments}
+          keyExtractor={(item) => item.id}
+          renderItem={({item}) => {
+            return (
+              <Text>{item.patient}</Text>
+            );
+          }}
+        />
       )}
 
       <Form
