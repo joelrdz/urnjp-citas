@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 
-const Form = ({ modalVisible }) => {
+const Form = ({ modalVisible, setModalVisible }) => {
   const [patient, setPatient] = useState('');
   const [owner, setOwner] = useState('');
   const [email, setEmail] = useState('');
@@ -19,7 +19,10 @@ const Form = ({ modalVisible }) => {
             <Text style={styles.titleBold}>Cita</Text>
           </Text>
 
-          <Pressable style={styles.btnCancel}>
+          <Pressable
+            style={styles.btnCancel}
+            onLongPress={() => setModalVisible(!modalVisible)}
+          >
             <Text style={styles.btnTextCancel}>X Cancelar</Text>
           </Pressable>
 

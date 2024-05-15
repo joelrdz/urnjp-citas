@@ -18,12 +18,15 @@ const App = () => {
       </Text>
 
       <Pressable
-        onPress={() => setModalVisible(true)}
+        onPress={() => setModalVisible(!modalVisible)}
         style={styles.buttonNewAppointment}>
         <Text style={styles.buttonTextNewAppointment}>Nueva Cita</Text>
       </Pressable>
 
-      <Form modalVisible={modalVisible} />
+      <Form
+        modalVisible={modalVisible}
+        setModalVisible={setModalVisible}
+      />
     </SafeAreaView>
   );
 };
