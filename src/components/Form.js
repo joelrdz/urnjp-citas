@@ -96,6 +96,10 @@ const Form = ({ modalVisible, setModalVisible }) => {
               numberOfLines={4}
             />
           </View>
+
+          <Pressable style={styles.btnNewAppointment}>
+            <Text style={styles.btnTextNewAppointment}>Agregar Cita</Text>
+          </Pressable>
         </ScrollView>
       </SafeAreaView>
     </Modal>
@@ -153,6 +157,20 @@ const styles = StyleSheet.create({
   containerDate: {
     backgroundColor: '#FFF',
     borderRadius: 10,
+  },
+  btnNewAppointment: {
+    marginVertical: 50,
+    backgroundColor: '#F59E0B',
+    paddingVertical: 15,
+    marginHorizontal: 30,
+    borderRadius: 10,
+  },
+  btnTextNewAppointment: {
+    color: '#5827A4',
+    textAlign: 'center',
+    fontWeight: '900',
+    fontSize: 16,
+    textTransform: 'uppercase',
   },
 });
 
