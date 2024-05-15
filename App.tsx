@@ -24,6 +24,12 @@ const App = () => {
         <Text style={styles.buttonTextNewAppointment}>Nueva Cita</Text>
       </Pressable>
 
+      {appointments.length === 0 ? (
+        <Text style={styles.noAppointments}>No hay citas aún</Text>
+      ) : (
+        <Text>Si hay citas</Text>
+      )}
+
       <Form
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
@@ -61,6 +67,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '900',
     textTransform: 'uppercase',
+  },
+  noAppointments: {
+    marginTop: 40,
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: '600',
   },
 });
 
