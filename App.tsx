@@ -7,6 +7,7 @@ import {
   Text,
 } from 'react-native';
 import Form from './src/components/Form';
+import Appointment from './src/components/Appointment';
 
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -32,9 +33,7 @@ const App = () => {
           data={appointments}
           keyExtractor={(item) => item.id}
           renderItem={({item}) => {
-            return (
-              <Text>{item.patient}</Text>
-            );
+            return <Appointment item={item} />;
           }}
         />
       )}

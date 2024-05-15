@@ -1,9 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
 
-const Appointment = () => {
+const Appointment = ({ item }) => {
+  const { patient } = item;
+
   return (
-    <Text>From Appointment</Text>
+    <Text>{patient}</Text>
   );
 };
 
