@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Modal, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 
 const Form = ({ modalVisible }) => {
@@ -18,6 +18,10 @@ const Form = ({ modalVisible }) => {
             Nueva {''}
             <Text style={styles.titleBold}>Cita</Text>
           </Text>
+
+          <Pressable style={styles.btnCancel}>
+            <Text style={styles.btnTextCancel}>X Cancelar</Text>
+          </Pressable>
 
           <View style={styles.field}>
             <Text style={styles.label}>Nombre Paciente</Text>
@@ -109,6 +113,20 @@ const styles = StyleSheet.create({
   },
   titleBold: {
     fontWeight: '900',
+  },
+  btnCancel: {
+    marginVertical: 30,
+    backgroundColor: '#5827A4',
+    marginHorizontal: 30,
+    padding: 15,
+    borderRadius: 10,
+  },
+  btnTextCancel: {
+    color: '#FFF',
+    textAlign: 'center',
+    fontWeight: '900',
+    fontSize: 16,
+    textTransform: 'uppercase',
   },
   field: {
     marginTop: 10,
