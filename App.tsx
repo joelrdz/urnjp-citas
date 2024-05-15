@@ -35,6 +35,7 @@ const App = () => {
           renderItem={({item}) => {
             return <Appointment item={item} />;
           }}
+          style={styles.list}
         />
       )}
 
@@ -81,6 +82,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 24,
     fontWeight: '600',
+  },
+  list: {
+    marginTop: 50,
+    marginHorizontal: 30,
   },
 });
 
