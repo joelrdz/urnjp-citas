@@ -9,6 +9,7 @@ import Form from './src/components/Form';
 
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const [appointments, setAppointments] = useState([]);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -26,6 +27,8 @@ const App = () => {
       <Form
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
+        appointments={appointments}
+        setAppointments={setAppointments}
       />
     </SafeAreaView>
   );

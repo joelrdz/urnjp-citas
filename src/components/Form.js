@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Alert, Modal, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 
-const Form = ({ modalVisible, setModalVisible }) => {
+const Form = ({ modalVisible, setModalVisible, appointments, setAppointments }) => {
   const [patient, setPatient] = useState('');
   const [owner, setOwner] = useState('');
   const [email, setEmail] = useState('');
@@ -26,7 +26,7 @@ const Form = ({ modalVisible, setModalVisible }) => {
       symptoms,
     };
 
-    console.log(newAppointment);
+    setAppointments([...appointments, newAppointment]);
   };
 
   return (
