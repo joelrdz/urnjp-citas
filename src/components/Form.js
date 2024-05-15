@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Modal, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import DatePicker from 'react-native-date-picker';
 
 const Form = ({ modalVisible, setModalVisible }) => {
@@ -13,7 +13,8 @@ const Form = ({ modalVisible, setModalVisible }) => {
   const handleAppointment = () => {
     // Validate
     if ([patient, owner, email, date, symptoms].includes('')) {
-      console.log('Hay Errores');
+      Alert.alert('Error', 'Todos los campos son obligatorios');
+      return;
     }
   };
 
