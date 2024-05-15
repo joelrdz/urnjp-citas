@@ -10,6 +10,13 @@ const Form = ({ modalVisible, setModalVisible }) => {
   const [date, setDate] = useState(new Date());
   const [symptoms, setSymptoms] = useState('');
 
+  const handleAppointment = () => {
+    // Validate
+    if ([patient, owner, email, date, symptoms].includes('')) {
+      console.log('Hay Errores');
+    }
+  };
+
   return (
     <Modal animationType="slide" visible={modalVisible}>
       <SafeAreaView style={styles.content}>
@@ -97,7 +104,10 @@ const Form = ({ modalVisible, setModalVisible }) => {
             />
           </View>
 
-          <Pressable style={styles.btnNewAppointment}>
+          <Pressable
+            style={styles.btnNewAppointment}
+            onPress={handleAppointment}
+          >
             <Text style={styles.btnTextNewAppointment}>Agregar Cita</Text>
           </Pressable>
         </ScrollView>
