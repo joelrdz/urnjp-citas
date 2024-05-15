@@ -27,6 +27,14 @@ const Form = ({ modalVisible, setModalVisible, appointments, setAppointments }) 
     };
 
     setAppointments([...appointments, newAppointment]);
+    setModalVisible(!modalVisible);
+
+    setPatient('');
+    setOwner('');
+    setEmail('');
+    setPhone('');
+    setDate(new Date());
+    setSymptoms('');
   };
 
   return (
