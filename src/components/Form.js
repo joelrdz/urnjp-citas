@@ -16,6 +16,17 @@ const Form = ({ modalVisible, setModalVisible }) => {
       Alert.alert('Error', 'Todos los campos son obligatorios');
       return;
     }
+
+    const newAppointment = {
+      patient,
+      owner,
+      email,
+      phone,
+      date,
+      symptoms,
+    };
+
+    console.log(newAppointment);
   };
 
   return (
